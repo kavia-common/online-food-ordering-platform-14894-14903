@@ -1,4 +1,12 @@
-// This file can be used to add references for global types like `vite/client`.
-
-// Add global `vite/client` types. For more info, see: https://vitejs.dev/guide/features#client-types
+/**
+ * This file declares env typings for Vite and Qwik usage.
+ * Add PUBLIC_ prefixed variables that are safe to expose to the browser.
+ */
 /// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly PUBLIC_API_BASE?: string;
+}
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}

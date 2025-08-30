@@ -1,6 +1,8 @@
 import { component$, Slot, useStyles$ } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import styles from "./styles.css?inline";
+import { Header } from "~/components/Header";
+import { Footer } from "~/components/Footer";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   cacheControl({
@@ -13,8 +15,12 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 export default component$(() => {
   useStyles$(styles);
   return (
-    <main>
-      <Slot />
-    </main>
+    <div class="app-shell">
+      <Header />
+      <div class="container" style={{ width: 'min(1280px, 100%)' }}>
+        <Slot />
+      </div>
+      <Footer />
+    </div>
   );
 });

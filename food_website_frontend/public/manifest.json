@@ -1,9 +1,10 @@
 {
-  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "qwik-project-name",
-  "short_name": "Welcome to Qwik",
-  "start_url": ".",
+  "name": "Foodly",
+  "short_name": "Foodly",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "A Qwik project app."
+  "background_color": "#ffffff",
+  "theme_color": "#FF5722",
+  "description": "Order your favorite food online.",
+  "icons": []
 }
